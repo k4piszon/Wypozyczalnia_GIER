@@ -1,0 +1,90 @@
+﻿@model Company.Models.Game
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<div class=" jumbotron ">
+    <h2>Usuń książkę</h2>
+</div>
+
+<h3>Czy napewno chcesz usunąć książkę?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Plant)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Plant)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EquipmentDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EquipmentDesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gamekind)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gamekind)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PricePerPieces)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PricePerPieces)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Image)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Image)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Usuń" class="btn btn-default" /> |
+            @Html.ActionLink("Powrót", "Index")
+        </div>
+    }
+</div>
